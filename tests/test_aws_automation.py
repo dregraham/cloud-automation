@@ -2,7 +2,6 @@
 Tests for AWSAutomation
 """
 
-import pytest
 from cloud_automation.aws_automation import AWSAutomation
 
 

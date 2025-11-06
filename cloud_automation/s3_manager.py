@@ -155,7 +155,6 @@ class S3Manager:
             return False
 
         bucket = self.buckets[bucket_name]
-        original_count = len(bucket["objects"])
         
         # Find and remove the object
         for obj in bucket["objects"]:

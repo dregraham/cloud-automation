@@ -2,7 +2,6 @@
 Tests for S3Manager
 """
 
-import pytest
 from cloud_automation.s3_manager import S3Manager
 
 

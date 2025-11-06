@@ -6,7 +6,6 @@ Main orchestrator for AWS resource automation simulation.
 import logging
 from typing import Dict, List, Optional, Any
 import yaml
-from pathlib import Path
 
 from .ec2_manager import EC2Manager
 from .s3_manager import S3Manager

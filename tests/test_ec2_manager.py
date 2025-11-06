@@ -2,7 +2,6 @@
 Tests for EC2Manager
 """
 
-import pytest
 from cloud_automation.ec2_manager import EC2Manager
 
 
