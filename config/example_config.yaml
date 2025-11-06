@@ -1,0 +1,73 @@
+# Example AWS Infrastructure Configuration
+
+# EC2 Instances
+ec2:
+  - instance_type: t2.micro
+    ami_id: ami-0c55b159cbfafe1f0
+    key_name: my-key-pair
+    security_groups:
+      - default
+    tags:
+      Name: web-server
+      Environment: development
+      
+  - instance_type: t2.small
+    ami_id: ami-0c55b159cbfafe1f0
+    tags:
+      Name: app-server
+      Environment: development
+
+# S3 Buckets
+s3:
+  - bucket_name: my-application-data
+    region: us-east-1
+    versioning: true
+    encryption: true
+    tags:
+      Project: MyApp
+      Environment: development
+      
+  - bucket_name: my-application-backups
+    region: us-west-2
+    tags:
+      Project: MyApp
+      Type: Backup
+
+# RDS Database Instances
+rds:
+  - db_instance_identifier: myapp-database
+    engine: mysql
+    engine_version: "8.0"
+    instance_class: db.t3.micro
+    allocated_storage: 20
+    db_name: myappdb
+    master_username: admin
+    master_password: SecurePassword123!
+    multi_az: false
+    backup_retention_period: 7
+    tags:
+      Name: Application Database
+      Environment: development
+
+# Lambda Functions
+lambda:
+  - function_name: image-processor
+    runtime: python3.9
+    handler: lambda_function.lambda_handler
+    timeout: 60
+    memory_size: 512
+    environment:
+      BUCKET_NAME: my-application-data
+      REGION: us-east-1
+    tags:
+      Project: MyApp
+      Function: ImageProcessor
+      
+  - function_name: api-handler
+    runtime: nodejs18.x
+    handler: index.handler
+    timeout: 30
+    memory_size: 256
+    tags:
+      Project: MyApp
+      Function: APIHandler

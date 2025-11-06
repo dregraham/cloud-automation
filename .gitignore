@@ -67,7 +67,8 @@ Thumbs.db
 *.pem
 *.key
 credentials
-config
+.aws/config
+.aws/credentials
 
 # Logs
 *.log
