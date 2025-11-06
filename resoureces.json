@@ -1,0 +1,22 @@
+{
+  "Resources": [
+    {
+      "Type": "EC2",
+      "Name": "WebServer01",
+      "Region": "us-east-1",
+      "AMI": "ami-0abcd1234",
+      "InstanceType": "t3.micro"
+    },
+    {
+      "Type": "S3",
+      "Name": "dre-backup-bucket",
+      "Region": "us-east-1",
+      "Encryption": "AES256"
+    },
+    {
+      "Type": "IAM",
+      "Name": "AppAccessRole",
+      "Policy": "AmazonS3FullAccess"
+    }
+  ]
+}

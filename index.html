@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AWS Provisioning Demo | Dre Graham</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.js"></script>
+</head>
+<body>
+  <main>
+    <h1>☁️ AWS Provisioning Demo (Python + Mock Boto3)</h1>
+
+    <pre><code class="language-python">
+from mock_aws import MockAWS
+
+aws = MockAWS()
+aws.create_ec2({"Name": "WebServer01", "Region": "us-east-1", "AMI": "ami-0abcd1234"})
+aws.create_s3({"Name": "dre-backup-bucket", "Region": "us-east-1", "Encryption": "AES256"})
+aws.create_iam({"Name": "AppAccessRole", "Policy": "AmazonS3FullAccess"})
+    </code></pre>
+
+    <button id="run-btn">▶ Run Demo</button>
+    <div id="output" class="output-box"></div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

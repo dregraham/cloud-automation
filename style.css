@@ -1,0 +1,49 @@
+@font-face {
+  font-family: 'Scribble';
+  src: url('scribble.ttf') format('truetype');
+}
+
+body {
+  background: #fff;
+  color: #000;
+  font-family: 'Scribble', Arial, sans-serif;
+  text-align: center;
+  padding: 2rem;
+}
+
+h1 {
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+}
+
+pre {
+  background: #f5f5f5;
+  padding: 1rem;
+  border-radius: 10px;
+  overflow-x: auto;
+  text-align: left;
+}
+
+button {
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  border: 2px solid #000;
+  background: transparent;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background: #000;
+  color: #fff;
+}
+
+.output-box {
+  margin-top: 1rem;
+  background: #f5f5f5;
+  padding: 1rem;
+  border-radius: 10px;
+  min-height: 100px;
+  font-family: monospace;
+  white-space: pre-wrap;
+}
