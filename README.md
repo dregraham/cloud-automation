@@ -11,9 +11,6 @@ It reads from `resources.json` and “creates” EC2, S3, and IAM resources with
 ### Technologies
 Python · boto3 (mocked) · JSON · HTML · JavaScript
 
-### Live Demo
-👉 https://dregraham.github.io/cloud-automation/
-
 ### Author
 **Dre Graham**  
 [www.dregraham.com](https://www.dregraham.com)
